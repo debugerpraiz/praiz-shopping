@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f8f8f8;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .hero {
+            position: relative;
+            text-align: center;
+            padding: 50px 0;
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        .hero-text h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-text button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #fff;
+            color: #007BFF;
+            border: none;
+            cursor: pointer;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        .product-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .product-item h3 {
+            margin: 10px 0;
+        }
+
+        .product-item p {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .product-item button {
+            padding: 5px 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 10px;
+        }
+
+        .footer-section p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+            <div class="logo">
+                <span>Brand Name</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h1>Special Offer</h1>
+                <div><p>Discover our latest products and enjoy exclusive discounts!</p></div>
+                <button>Shop Now</button>
+            </div>
+        </section>
+
+        <section class="products">
+            <div class="product-item">
+                <h3>Product Name</h3>
+                <p>$19.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product-item">
+                <h3>Product Description</h3>
+                <p>$29.99</p>
+                <button>View Details</button>
+            </div>
+            <div class="product-item">
+                <h3>Special Offer</h3>
+                <p>$15.99</p>
+                <button>Buy Now</button>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-section">
+                <h4>Customer Service</h4>
+                <p>Contact us: support@example.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <p>Shipping & Returns</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>Social Media Links</p>
+            </div>
+        </footer>
+    </main>
+</body>
+</html>

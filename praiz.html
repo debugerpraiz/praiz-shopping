@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Commerce Site</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Live fade-in animation for products */
+    .product {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.7s forwards;
+    }
+    .product:nth-child(1) { animation-delay: 0.1s; }
+    .product:nth-child(2) { animation-delay: 0.2s; }
+    .product:nth-child(3) { animation-delay: 0.3s; }
+    .product:nth-child(4) { animation-delay: 0.4s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* Hover animation for products */
+    .product:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background-image: url('images/download2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav a {
+      color: white;
+      margin-left: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: #eee;
+    }
+    .featured {
+      padding: 2rem;
+    }
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .product {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+     
+    }
+    .product img {
+      max-width: 100%;
+      border-radius: 4px;
+      transition: transform 0.5s;
+    }
+    .product img:hover {
+      transform: scale(1.1) rotate(-3deg);
+    }
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+    .product a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .product a:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #333;
+      color: white;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+<header>
+  <div style="display: flex; align-items: center;">
+    <img src="images/praiz.jpg" alt="Praiz Logo" style="height: 50px; margin-right: 1rem;">
+    <h1>Praiz Shopping hub</h1>
+  </div>
+  <nav>
+    <a href="praiz.html"><i class="fas fa-home"></i> Home</a>
+    <a href="products.html"><i class="fas fa-box"></i> Products</a>
+    <a href="cart.html"><i class="fas fa-shopping-cart"></i> Cart</a>
+    <a href="login.html"><i class="fas fa-sign-in-alt"></i> Login</a>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Praiz Shopping!</h2>
+    <h3><i>Where convenience meets variety</i></h3>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="featured">
+    <h2>Featured Products</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/download (5).jpg" alt="Red Sneakers">
+        <h3>Red Sneakers</h3>
+        <p>$10.00</p>
+        <a href="checkout.html">View</a>
+      </div>
+      <div class="product">
+        <img src="images/download.jpg" alt="Blue Backpack">
+        <h3>Blue Backpack</h3>
+        <p>$15.00</p>
+        <a href="checkout.html">View</a>
+      </div>
+      <div class="product">
+        <img src="images/download (1).jpg" alt="Wireless Headphones">
+        <h3>Wireless Headphones</h3>
+        <p>$25.00</p>
+        <a href="checkout.html">View</a>
+      </div>
+      <div class="product">
+        <img src="images/download (2).jpg" alt="Smart Watch">
+        <h3>Smart Watch</h3>
+        <p>$30.00</p>
+        <a href="checkout.html">View</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Praiz Shopping. All rights reserved.</p>
+  </footer>
+</body>
+</html>
