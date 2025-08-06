@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My E-Commerce Site</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      background-image: url('image/download2.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      display: flex;
+      padding: 1rem;
+    }
+
+    aside {
+      width: 100px;
+      background-color: rgba(51, 51, 51, 0.9);
+      color: white;
+      height: 100vh;
+      padding: 2rem 1rem;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    aside h1 {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    aside nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin-bottom: 1rem;
+    }
+
+    aside nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      margin-left: 200px;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      width: calc(100% - 200px);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem;
+      background-color: rgba(238, 238, 238, 0.8);
+    }
+
+    .featured {
+      padding: 2rem;
+      background-color: rgba(255, 255, 255, 0.8);
+      flex: 1;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .product {
+      background-color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .product img {
+      max-width: 100%;
+      border-radius: 4px;
+    }
+
+    .product h3 {
+      margin: 0.5rem 0;
+    }
+
+    .product a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      padding: 0.5rem 1rem;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .product a:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      padding: 3.6rem;
+      background-color: rgba(22, 22, 22, 0.9);
+      color: white;
+      margin-top: auto;
+      width: 100%;
+      max-width: 1000px;
+      align-self: last baseline;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar Navigation -->
+  <aside>
+    <h1>Praiz Shopping Center</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h2>Welcome to Praiz Shopping!</h2>
+      <p><i>Where shopping is made perfect</i></p>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+      <h2>Featured Products</h2>
+      <div class="product-grid">
+        <div class="product">
+          <img src="images/product1.jpg" alt="Product 1">
+          <h3>Product 1</h3>
+          <p>$10.00</p>
+          <a href="checkout.html?product=1">View</a>
+        </div>
+        <div class="product">
+          <img src="images/product2.jpg" alt="Product 2">
+          <h3>Product 2</h3>
+          <p>$15.00</p>
+          <a href="checkout.html?product=2">View</a>
+        </div>
+        <div class="product">
+          <img src="images/product2.jpg" alt="Product">
+          <h3>Product</h3>
+          <p>$15.00</p>
+          <a href="checkout.html?product=3">View</a>
+        </div>
+        <div class="product">
+          <img src="images/product2.jpg" alt="Product">
+          <h3>Product</h3>
+          <p>$15.00</p>
+          <a href="checkout.html?product=4">View</a>
+        </div>
+        <div class="product">
+          <img src="images/product2.jpg" alt="Product">
+          <h3>Product</h3>
+          <p>$15.00</p>
+          <a href="checkout.html?product=5">View</a>
+        </div>
+        <div class="product">
+          <img src="images/product2.jpg" alt="Product">
+          <h3>Product</h3>
+          <p>$15.00</p>
+          <a href="checkout.html?product=6">View</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Praiz Shopping. All rights reserved.</p>
+    </footer>
+  </main>
+</body>
+</html>

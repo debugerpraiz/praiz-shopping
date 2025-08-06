@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .split-container {
+      display: flex;
+      height: 100vh;
+    }
+    .left-half {
+      flex: 1;
+      background: url('images/download2.jpg') center center/cover no-repeat;
+    }
+    .right-half {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f4f4f4;
+      
+    }
+    .checkout-container {
+      width: 100%;
+      max-width: 400px;
+      background: grey;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    .product-info {
+      margin-bottom: 2rem;
+    }
+    label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    button {
+      width: 100%;
+      padding: 1rem;
+      background-color: #13772a;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    @media (max-width: 800px) {
+      .split-container {
+        flex-direction: column;
+      }
+      .left-half, .right-half {
+        flex: none;
+        height: 50vh;
+        width: 100%;
+      }
+      .right-half {
+        height: auto;
+        min-height: 50vh;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="split-container">
+    <div class="left-half"></div>
+    <div class="right-half">
+      <div class="checkout-container">
+        <h2>Checkout</h2>
+        <div class="product-info" id="product-info">
+          <!-- Product details will appear here -->
+        </div>
+        <form>
+          <label for="name">Full Name</label>
+          <input type="text" id="name" required>
+          <label for="card">Card Number</label>
+          <input type="text" id="card" placeholder="1234 5678 9012 3456" required>
+          <label for="expiry">Expiry Date</label>
+          <input type="text" id="expiry" placeholder="MM/YY" required>
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" required>
+          <button type="submit">Pay Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('product');
+    const products = {
+      1: { name: 'Product 1', price: '$10.00' },
+      2: { name: 'Product 2', price: '$15.00' }
+    };
+    const product = products[productId];
+    if (product) {
+      document.getElementById('product-info').innerHTML = `
+        <h3>${product.name}</h3>
+        <p>Price: ${product.price}</p>
+      `;
+    } else {
+      document.getElementById('product-info').innerHTML = `<p>Product not found.</p>`;
+    }
+  </script>
+</body>
+</html>
